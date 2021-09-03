@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 02 (bis)</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 70%;
+            background: orange;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        h1{
+            position: relative;
+            top: calc(50%/2);
+        }
+        
+
+        section {
+            width: 70%;
+            padding: 20px;
+            background: pink;
+            margin: auto;
+            height: calc(100vh - 100px);
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .oculto {
+            display: none;
+        }
+        :target{
+            display: block;
+        }
+        :target + .vermas{
+            display: none;
+        }
+
+        :target + .oculto{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ejercicio 02 BIS</h1>
+    </header>
+    <section id="caja">
+        <h2>Título de la sección</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ullam perspiciatis porro odit labore eius suscipit deserunt. Earum dolore quisquam nesciunt, vero perferendis quibusdam harum, alias natus vitae illo officia!</p>
+
+        <p id="oculto" class="oculto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus non velit ab, consequatur animi debitis consequuntur, voluptatibus asperiores et minus perspiciatis labore praesentium, consectetur. Ipsum, officiis sed alias aperiam asperiores!</p>
+
+        <a id="vermore" class="vermas" href="#oculto">ver más</a>
+        <a href="#vermore">ver menos</a>
+    </section>
+
+</body>
+
+</html>
